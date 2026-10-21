@@ -1,83 +1,80 @@
 <div align="center">
 
-# LiveQ&A (日本語カスタム版)
+Dr. Alfred Ang 様が作成された、ウェブリアルタイムQAの「LiveQ&A」を日本語に対応するよう改変したものです。
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/ja/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/ja/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/ja/docs/Web/JavaScript)
-[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/?hl=ja)
+以下元レポジトリのREADME
+
+---
+
+
+# LiveQ&A
+
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-**ワークショップ、カンファレンス、授業、タウンホールミーティング向けのリアルタイム質疑応答（Q&A）＆投票プラットフォーム**
+**Real-time audience Q&A and voting platform for workshops, conferences, classrooms, and town halls.**
 
-[ライブデモ](https://<YOUR_USERNAME>.github.io/live-qna/) · [バグ報告](https://github.com/<YOUR_USERNAME>/live-qna/issues) · [機能リクエスト](https://github.com/<YOUR_USERNAME>/live-qna/issues)
-
-*※本リポジトリは [alfredang/live-qna](https://github.com/alfredang/live-qna) をフォークし、日本語環境向けにローカライズおよびカスタマイズしたものです。*
+[Live Demo](https://alfredang.github.io/live-qna/) · [Report Bug](https://github.com/alfredang/live-qna/issues) · [Request Feature](https://github.com/alfredang/live-qna/issues)
 
 </div>
 
 ---
 
-## スクリーンショット
+## Screenshot
 
 ![Screenshot](screenshot.png)
 
-## 概要 (About)
+## About
 
-LiveQ&Aは、Pigeonhole Liveにインスパイアされたリアルタイムのオーディエンス参加型プラットフォームです。
-主催者（ホスト）がQ&Aセッションを作成し、QRコードまたはセッションコードを参加者に共有します。参加者はスマホ等から質問を投稿したり、気になる質問に「いいね（投票）」したりでき、人気の質問がリアルタイムで上位に表示されます。
+LiveQ&A is a real-time audience engagement platform inspired by Pigeonhole Live. Hosts create a Q&A session and share a QR code or session code with their audience. Participants submit questions, upvote the ones they care about most, and the best questions rise to the top — all in real time.
 
-### 🇯🇵 オリジナル版からの変更点 (Customizations)
+### Key Features
 
-- **UIの完全日本語化**: ランディングページ、ホスト用ダッシュボード、参加者ビューの表示テキストやトースト通知をすべて日本語に翻訳
-- **日本語フォント・レイアウト調整**: 日本語表示時に自然に見えるようCSSのフォントファミリーや改行ルールを調整
-- **CSVエクスポートの改善**: Excel等で開いた際に日本語が文字化けしないよう調整（※必要に応じて記載）
-- **類似質問判定の調整**: 日本語の質問文に対応するための調整（※必要に応じて記載）
-
-### 主な機能 (Key Features)
-
-| 機能 | 説明 |
+| Feature | Description |
 |---------|-------------|
-| **QRコード参加** | 参加者はQRコードをスキャンするだけで即座にセッションに参加可能 |
-| **リアルタイム同期** | 質問、投票、回答状況がFirebase経由でリアルタイムに更新 |
-| **投票（Upvote）機能** | 参加者の投票により、関心度の高い質問が自動的に上位へ浮上 |
-| **ホスト用ダッシュボード** | 質問への回答、ピン留め、スポットライト表示、モデレーションが可能 |
-| **匿名認証** | アカウント登録不要 — Firebase Anonymous Authで参加者を識別 |
-| **ダークモード対応** | OSのシステム設定に連動するダーク/ライトテーマ切り替え |
-| **CSVエクスポート** | イベント終了後の振り返り用に、全質問と回答をCSV出力 |
-| **重複質問の検知** | 単語の類似度マッチングにより、似たような質問の重複投稿を防止 |
-| **モバイルファースト** | 参加者画面はスマートフォンの画面サイズに最適化 |
+| **QR Code Join** | Participants scan a QR code to instantly join a session |
+| **Real-Time Sync** | Questions, votes, and answers update live via Firebase |
+| **Upvoting** | Audience votes surface the most popular questions |
+| **Host Dashboard** | Answer, pin, spotlight, and moderate questions |
+| **Anonymous Auth** | No sign-up required — Firebase anonymous auth handles identity |
+| **Dark Mode** | System-aware dark/light theme toggle |
+| **CSV Export** | Export all questions and answers for post-event review |
+| **Duplicate Detection** | Prevents similar questions via word-similarity matching |
+| **Mobile-First** | Participant view optimized for phone screens |
 
-## 技術スタック (Tech Stack)
+## Tech Stack
 
-| カテゴリ | 使用技術 |
+| Category | Technology |
 |----------|-----------|
-| フロントエンド | HTML5, CSS3, Vanilla JavaScript |
-| バックエンド | Firebase Cloud Firestore (リアルタイム NoSQL) |
-| 認証 | Firebase Anonymous Authentication (匿名認証) |
-| QRコード生成 | qrcode-generator (CDN) |
-| ホスティング | GitHub Pages (GitHub Actions 経由) |
-| CI/CD | GitHub Actions (デプロイ時のSecret注入) |
+| Frontend | HTML5, CSS3, Vanilla JavaScript |
+| Backend | Firebase Cloud Firestore (real-time NoSQL) |
+| Auth | Firebase Anonymous Authentication |
+| QR Code | qrcode-generator (CDN) |
+| Hosting | GitHub Pages via GitHub Actions |
+| CI/CD | GitHub Actions with secret injection |
 
-## アーキテクチャ (Architecture)
+## Architecture
 
-```text
+```
 ┌─────────────────────────────────────────────────┐
-│                   GitHub Pages                  │
-│               (Static Hosting + CDN)            │
+│                  GitHub Pages                    │
+│              (Static Hosting + CDN)              │
 └──────────────────────┬──────────────────────────┘
                        │
         ┌──────────────┼──────────────┐
         ▼              ▼              ▼
-   index.html      host.html    participant.html
-   (トップ画面)   (ホスト管理画面)  (モバイル参加者画面)
+   index.html     host.html    participant.html
+   (Landing)     (Dashboard)    (Mobile Q&A)
         │              │              │
         └──────────────┼──────────────┘
                        ▼
               ┌────────────────┐
               │  firebase-     │
               │  config.js     │
-              │  (SDK 初期化)  │
+              │  (SDK init)    │
               └───────┬────────┘
                       ▼
         ┌─────────────────────────┐
@@ -91,83 +88,83 @@ LiveQ&Aは、Pigeonhole Liveにインスパイアされたリアルタイムの�
         └─────────────────────────┘
 ```
 
-## ディレクトリ構成 (Project Structure)
+## Project Structure
 
-```text
+```
 live-qna/
-├── index.html              # ランディングページ — セッションの作成・参加
-├── host.html               # ホスト用ダッシュボード（管理・モデレーションツール）
-├── participant.html        # モバイル最適化された参加者用ビュー
+├── index.html              # Landing page — create or join session
+├── host.html               # Host dashboard with moderation tools
+├── participant.html        # Mobile-friendly participant view
 ├── css/
-│   └── style.css           # スタイルシート（ダークモード対応）
+│   └── style.css           # Full styling with dark mode support
 ├── js/
-│   ├── firebase-config.js  # Firebase初期化（デプロイ時にSecretを注入）
-│   ├── utils.js            # 共通ヘルパー（QR生成、トースト通知、時間表示、CSV出力、類似度判定）
-│   ├── app.js              # ランディングページのロジック（セッション作成・参加）
-│   ├── host.js             # ホスト画面のロジック（モデレーション、回答、エクスポート）
-│   └── participant.js      # 参加者画面のロジック（質問投稿、投票、リアルタイム更新）
+│   ├── firebase-config.js  # Firebase initialization (secrets injected at deploy)
+│   ├── utils.js            # Shared helpers (QR, toast, time, CSV, similarity)
+│   ├── app.js              # Landing page logic (create/join sessions)
+│   ├── host.js             # Host dashboard (moderation, answers, export)
+│   └── participant.js      # Participant view (submit, vote, real-time)
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml      # GitHub Actions — ビルド＆GitHub Pagesへのデプロイ
-├── firebase.json           # Firebase Hosting 設定
-├── firestore.rules         # Firestore セキュリティルール
-├── firestore.indexes.json  # Firestore インデックス設定
+│       └── deploy.yml      # GitHub Actions — builds & deploys to Pages
+├── firebase.json           # Firebase Hosting config
+├── firestore.rules         # Firestore security rules
+├── firestore.indexes.json  # Firestore index config
 └── .gitignore
 ```
 
-## セットアップ手順 (Getting Started)
+## Getting Started
 
-### 前提条件 (Prerequisites)
+### Prerequisites
 
-- [Firebase](https://console.firebase.google.com/) プロジェクトを作成し、以下を有効化してください：
-  - **Authentication（認証）** で「匿名（Anonymous）」を有効化
-  - **Cloud Firestore** データベースを作成
-- [GitHub CLI](https://cli.github.com/) （任意：コマンドラインからSecretsを設定する場合）
+- A [Firebase](https://console.firebase.google.com/) project with:
+  - **Anonymous Authentication** enabled
+  - **Cloud Firestore** database created
+- [GitHub CLI](https://cli.github.com/) (optional, for setting secrets)
 
-### ローカル開発環境での実行 (Local Development)
+### Local Development
 
-1. **リポジトリのクローン**
+1. **Clone the repository**
    ```bash
-   git clone [https://github.com/](https://github.com/)<YOUR_USERNAME>/live-qna.git
+   git clone https://github.com/alfredang/live-qna.git
    cd live-qna
    ```
 
-2. **Firebase設定の追加**
+2. **Add your Firebase config**
 
-   `js/firebase-config.js` を編集し、`__FIREBASE_*__` のプレースホルダーをご自身のFirebaseプロジェクトの設定値に書き換えます（※ローカルテスト時のみ。本番用リポジトリにAPIキー等を直接コミットしないよう注意してください）。
+   Edit `js/firebase-config.js` and replace the `__FIREBASE_*__` placeholders with your actual Firebase config values.
 
-3. **ブラウザで開く**
+3. **Open in browser**
    ```bash
    open index.html
    ```
-   または、任意のローカルサーバー（例: `npx serve .` や VS Code の Live Server など）で起動します。
+   Or use any local server (e.g., `npx serve .`).
 
-### 環境変数・シークレットの設定 (GitHub Pages デプロイ用)
+### Environment Secrets (for GitHub Pages deployment)
 
-GitHubリポジトリの **Settings → Secrets and variables → Actions** から、以下の Repository secrets を登録してください：
+Set these secrets in your GitHub repo under **Settings → Secrets and variables → Actions**:
 
-| シークレット名 | 設定する値 |
+| Secret | Value |
 |--------|-------|
-| `FIREBASE_API_KEY` | Firebase API キー |
+| `FIREBASE_API_KEY` | Your Firebase API key |
 | `FIREBASE_AUTH_DOMAIN` | `your-project.firebaseapp.com` |
-| `FIREBASE_PROJECT_ID` | Firebase プロジェクト ID |
+| `FIREBASE_PROJECT_ID` | Your Firebase project ID |
 | `FIREBASE_STORAGE_BUCKET` | `your-project.firebasestorage.app` |
-| `FIREBASE_MESSAGING_SENDER_ID` | 送信者 ID (Sender ID) |
-| `FIREBASE_APP_ID` | アプリ ID (App ID) |
-| `FIREBASE_MEASUREMENT_ID` | 測定 ID (Measurement ID) |
+| `FIREBASE_MESSAGING_SENDER_ID` | Your sender ID |
+| `FIREBASE_APP_ID` | Your app ID |
+| `FIREBASE_MEASUREMENT_ID` | Your measurement ID |
 
-GitHub Actionsのワークフローによってデプロイ時にこれらの値が注入されるため、ソースコード上にシークレットが直接露出することはありません。
+The GitHub Actions workflow injects these at deploy time so secrets never appear in source code.
 
-## デプロイ (Deployment)
+## Deployment
 
-### GitHub Pages (自動デプロイ)
+### GitHub Pages (automated)
 
-`main` ブランチにプッシュすると、GitHub Actions ワークフローが自動的に以下を実行します：
-1. コードのチェックアウト
-2. GitHub Environment / Secrets から Firebase の設定値を注入
-3. GitHub Pages へデプロイ
+Push to `main` and the GitHub Actions workflow handles everything:
+1. Checks out code
+2. Injects Firebase secrets from GitHub environment
+3. Deploys to GitHub Pages
 
-### Firebase Hosting (代替手段)
+### Firebase Hosting (alternative)
 
 ```bash
 npm install -g firebase-tools
@@ -176,59 +173,58 @@ firebase init hosting
 firebase deploy
 ```
 
-## Firestore データモデル (Firestore Data Model)
+## Firestore Data Model
 
-```text
+```
 sessions/{sessionId}
-  ├── title              (string: セッション名)
-  ├── code               (string: 6文字のユニークコード)
-  ├── hostId             (string: ホストのFirebase UID)
-  ├── isActive           (boolean: セッション有効状態)
-  ├── acceptingQuestions (boolean: 質問受付中フラグ)
-  ├── createdAt          (timestamp: 作成日時)
-  ├── participantCount   (number: 参加者数)
+  ├── title             (string)
+  ├── code              (string, 6-char unique)
+  ├── hostId            (string, Firebase UID)
+  ├── isActive          (boolean)
+  ├── acceptingQuestions (boolean)
+  ├── createdAt         (timestamp)
+  ├── participantCount  (number)
   │
   └── questions/{questionId}
-        ├── text                 (string: 質問本文)
-        ├── participantName      (string: 投稿者名)
-        ├── participantId        (string: 投稿者のUID)
-        ├── createdAt            (timestamp: 投稿日時)
-        ├── voteCount            (number: 得票数)
+        ├── text                 (string)
+        ├── participantName      (string)
+        ├── participantId        (string)
+        ├── createdAt            (timestamp)
+        ├── voteCount            (number)
         ├── status               (string: open | answered)
-        ├── isPinned             (boolean: ピン留めフラグ)
-        ├── isCurrentlyAnswering (boolean: 現在回答中フラグ)
-        ├── answer               (string: 回答テキスト)
+        ├── isPinned             (boolean)
+        ├── isCurrentlyAnswering (boolean)
+        ├── answer               (string)
         │
         └── votes/{participantId}
-              ├── voted          (boolean: 投票済みフラグ)
-              └── timestamp      (timestamp: 投票日時)
+              ├── voted          (boolean)
+              └── timestamp      (timestamp)
 ```
 
-## コントリビューション (Contributing)
+## Contributing
 
-プルリクエストや改善提案を歓迎します！
+Contributions are welcome!
 
-1. このリポジトリをフォーク
-2. フィーチャーブランチを作成 (`git checkout -b feature/amazing-feature`)
-3. 変更をコミット (`git commit -m 'Add amazing feature'`)
-4. ブランチにプッシュ (`git push origin feature/amazing-feature`)
-5. Pull Request を作成
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 作者・クレジット (Credits)
+## Developed By
 
-- **Original Creator**: **Dr. Alfred Ang** ([alfredang/live-qna](https://github.com/alfredang/live-qna))
-- **Japanese Localization & Customization**: [<YOUR_USERNAME>](https://github.com/<YOUR_USERNAME>)
+**Dr. Alfred Ang**
 
-## 謝辞 (Acknowledgements)
+## Acknowledgements
 
-- [Firebase](https://firebase.google.com/) — リアルタイムバックエンド
-- [qrcode-generator](https://github.com/kazuhikoarase/qrcode-generator) — QRコード生成ライブラリ
-- [Pigeonhole Live](https://pigeonholelive.com/) — インスピレーション
+- [Firebase](https://firebase.google.com/) — Real-time backend
+- [qrcode-generator](https://github.com/kazuhikoarase/qrcode-generator) — QR code generation
+- [Pigeonhole Live](https://pigeonholelive.com/) — Inspiration
 
 ---
 
 <div align="center">
 
-このプロジェクトが役に立ったら、ぜひオリジナルおよび本リポジトリに ⭐ をお願いします！
+If you found this useful, please give it a ⭐
 
 </div>
